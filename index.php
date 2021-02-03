@@ -12,21 +12,20 @@
     $newObj = new Employee();
     $emps = $newObj->getEmployees();
   ?>
-  <table id="employee_grid" class="table" width="100%" cellspacing="0">
+  <table id="test_lab6" class="table" width="100%" cellspacing="0">
     <thead>
       <tr>
+        <th>ID</th>
         <th>Name</th>
-        <th>Salary</th>
-        <th>Age</th>
-        <th>Action</th>
+        <th>Price</th>
       </tr>
     </thead>
     <tbody>
       <?php foreach($emps as $key => $emp) :?>
       <tr>
+        <td><?php echo $emp['employee_id'] ?></td>
         <td><?php echo $emp['employee_name'] ?></td>
-        <td><?php echo $emp['employee_salary'] ?></td>
-        <td><?php echo $emp['employee_age'] ?></td>
+        <td><?php echo $emp['employee_price'] ?></td>
         <td><div class="btn-group" data-toggle="buttons"><a href="#" target="_blank" class="btn btn-warning btn-xs">Edit</a><a href="#" target="_blank" class="btn btn-danger btn-xs">Delete</a><a href="#" target="_blank" class="btn btn-primary btn-xs">View</a></div></td>
       </tr>
     <?php endforeach;?>
